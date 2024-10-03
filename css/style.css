@@ -8,9 +8,9 @@
 
 /*Cabeza*/
 
-.gradiente{
-    background: rgb(163,110,158);
-background: linear-gradient(90deg, rgba(163,110,158,1) 43%, rgba(223,203,218,0.29744397759103647) 70%);
+.gradiente {
+    background: rgb(163, 110, 158);
+    background: linear-gradient(90deg, rgba(163, 110, 158, 1) 43%, rgba(223, 203, 218, 0.29744397759103647) 70%);
 }
 
 .cabeza__nav__div__a__h1 {
@@ -60,11 +60,31 @@ background: linear-gradient(90deg, rgba(163,110,158,1) 43%, rgba(223,203,218,0.2
     }
 }
 
+/*Carrousel*/
+
+@media screen and (max-width: 600px) {
+    .carousel-titulo {
+        font-size: medium;
+    }
+
+    .carousel-comentarios {
+        font-size: small;
+    }
+}
+
 /*Contacto*/
 
 .cuerpo__mapa {
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 700px) {
+    .cuerpo__mapa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .cuerpo__mapa__mapa {
@@ -96,14 +116,6 @@ background: linear-gradient(90deg, rgba(163,110,158,1) 43%, rgba(223,203,218,0.2
     margin-top: 80px;
 }
 
-/*Tarjetas*/
-
-.tarjetas {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
 /*Pie*/
 
 .pie__caja {
@@ -111,7 +123,7 @@ background: linear-gradient(90deg, rgba(163,110,158,1) 43%, rgba(223,203,218,0.2
     justify-content: space-around;
 }
 
-.redessociales{
+.redessociales {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -187,17 +199,109 @@ background: linear-gradient(90deg, rgba(163,110,158,1) 43%, rgba(223,203,218,0.2
     width: 300px;
 }
 
-/*Productos - Velas*/
-
-.cuerpo__velas {
-    display: flex;
-    flex-direction: row;
+@media screen and (max-width: 670px) {
+    .pedidos__pedidos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.cuerpo__velas__precio{
+/*Nosotros*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        "cabeza cabeza cabeza"
+        "aside cuerpo cuerpo"
+        "pie pie pie"
+    ;
+}
+
+.grid__cabeza {
+    grid-area: cabeza;
+}
+
+.grid__cuerpo {
+    grid-area: cuerpo;
+}
+
+.grid__aside {
+    grid-area: aside;
+}
+
+.grid__pie {
+    grid-area: pie;
+}
+
+@media screen and (max-width: 920px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "cabeza"
+            "cuerpo"
+            "aside"
+            "pie"
+        ;
+    }
+}
+
+.grid__aside__principal {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background: rgb(163, 110, 158);
+}
+
+@media screen and (max-width: 920px) {
+    .grid__aside__principal {
+        padding-top: 10px;
+        background: rgb(163, 110, 158);
+        background: linear-gradient(90deg, rgba(163, 110, 158, 1) 43%, rgba(223, 203, 218, 0.29744397759103647) 70%);
+    }
+}
+
+.grid__cuerpo__historia__caja {
+    border: 10px;
+    border-style: double;
+    padding: 20px;
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 50px;
+}
+
+.grid__cuerpo__histoia__caja__parrafo {
     text-align: center;
-    border-radius: 30px;
-    border-color: tomato;
+}
+
+.grid__cuerpo__historia__caja__tituloh2 {
+    text-align: center;
     color: blue;
-    background-color: chartreuse;
+}
+
+.grid__cuerpo__historia__caja__tituloh3 {
+    text-align: center;
+    color: red;
+}
+
+.grid__cuerpo__historia__caja__tituloh4 {
+    text-align: center;
+    color: green;
+}
+
+.grid__aside__principal__cajas1__imagen {
+    width: 100%;
+}
+
+.grid__aside__principal__caja1 {
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    width: 375px;
+    background-color: rgb(175, 223, 127);
 }

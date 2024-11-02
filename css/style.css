@@ -314,6 +314,13 @@
     padding: 5px;
 }
 
+@media screen and (max-width: 800px) {
+    .velas {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .velas__imagen {
     width: 100%;
 }

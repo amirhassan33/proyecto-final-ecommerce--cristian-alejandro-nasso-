@@ -305,3 +305,33 @@
     width: 375px;
     background-color: rgb(175, 223, 127);
 }
+
+/*Productos*/
+
+.velas {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.velas__imagen {
+    width: 100%;
+}
+
+.velas__titulo {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.velas__parrafo {
+    font-size: medium;
+    font-style: italic;
+    text-align: center;
+}
+
+.velas__caja {
+    border-radius: 2px;
+    border: 10px;
+    padding: 3px;
+    border-style: double;
+}
